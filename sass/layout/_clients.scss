@@ -1,0 +1,29 @@
+.clients__title {
+  margin-bottom: 50px;
+}
+
+.companies-list {
+  display: flex;
+  align-items: center;
+}
+
+.companies-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.companies-list__link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  fill: var(--primary-icon-color);
+  border: 1px solid var(--primary-icon-color);
+  border-radius: 4px;
+  transition: fill var(--duration) var(--timing-function),
+    border var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+}

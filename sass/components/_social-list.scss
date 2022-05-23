@@ -1,0 +1,24 @@
+.social-list {
+  display: flex;
+  align-items: center;
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list__link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  fill: var(--primary-icon-color);
+  transition: fill var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--primary-white-color);
+    background-color: var(--accent-color);
+  }
+}
