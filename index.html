@@ -21,12 +21,17 @@
     <title>Web Studio (Version 2.1)</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
-        <nav class="navigation">
-          <a href="" lang="en" class="logo header__logo link"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
+        <a href="" lang="en" class="logo header__logo link"
+          ><span class="logo__accent">Web</span>Studio</a
+        >
+        <button class="mob-menu-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-btn__menu-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-btn"></use>
+          </svg>
+        </button>
+        <nav class="navigation hidden">
           <ul class="menu-list list">
             <li class="menu-list__item">
               <a href="" class="menu-list__link link menu-list__link--current">Студия</a>
@@ -37,10 +42,10 @@
             <li class="menu-list__item"><a href="" class="menu-list__link link">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="contacts list header__contacts">
+        <ul class="contacts list hidden header__contacts">
           <li class="contacts__item">
             <a class="contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
+              <svg class="contacts__icon contacts__icon--small-enevelop" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -48,7 +53,7 @@
           </li>
           <li class="contacts__item">
             <a class="contacts__link link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
+              <svg class="contacts__icon contacts__icon--small-smartphone" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -56,7 +61,53 @@
           </li>
         </ul>
       </div>
-    </header> -->
+      <div class="menu-container js-menu-container" id="mobile-menu"">
+      <button class="mob-menu-btn js-close-menu">
+        <svg class="menu-btn__close-icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close-menu-btn"></use>
+        </svg>
+      </button>
+      <div class="menu-container__wrapper">
+        <nav class="navigation">
+          <ul class="menu-list list">
+            <li class="menu-list__item">
+              <a href="" class="menu-list__link link menu-list__link--current">Студия</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="./portfolio.html" class="menu-list__link link">Портфолио</a>
+            </li>
+            <li class="menu-list__item"><a href="" class="menu-list__link link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="menu-container__overlay">
+        <ul class="contacts list header__contacts">
+          <li class="contacts__item">
+            <a class="contacts__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link link contacts__link-smaller" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-soc-list list">
+          <li class="menu-soc-list__item">
+            <a href="" class="menu-soc-list__link link">Instagram</a>
+          </li>
+          <li class="menu-soc-list__item">
+            <a href="" class="menu-soc-list__link link">Twitter</a>
+          </li>
+          <li class="menu-soc-list__item">
+            <a href="" class="menu-soc-list__link link">Facebook</a>
+          </li>
+          <li class="menu-soc-list__item">
+            <a href="" class="menu-soc-list__link link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="container">
@@ -537,6 +588,13 @@
         </form>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
