@@ -10,14 +10,8 @@
 }
 
 .section__filter-list {
-  margin-bottom: 32px;
-
-  @include tablet {
-    margin-bottom: 30px;
-  }
-
-  @include desktop {
-    margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: -8px;
   }
 }
 
@@ -60,6 +54,26 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.section__card-list {
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+  }
+
+  @include tablet {
+    margin-top: 30px;
+  }
+
+  @include desktop {
+    margin-top: 50px;
+  }
+
+  @include tablet {
+    margin-left: -30px;
+    margin-bottom: -30px;
   }
 }
 
@@ -77,27 +91,13 @@
   }
 
   @include tablet {
-    flex-basis: calc((100% - 30px) / 2);
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &:not(:nth-child(2n)) {
-      margin-right: 30px;
-    }
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
-    }
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
   }
 
   @include desktop {
-    flex-basis: calc((100% - 60px) / 3);
-
-    &:not(:nth-child(3n)) {
-      margin-right: 30px;
-    }
-    &:not(:nth-last-child(-n + 3)) {
-      margin-bottom: 30px;
-    }
+    flex-basis: calc(100% / 3 - 30px);
   }
 }
 
